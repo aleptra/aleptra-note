@@ -1,0 +1,20 @@
+<script src="https://www.front.nu/dist/front.js" template="true"></script>
+
+<title globalize="open">Öppna</title>
+
+<article class="pauto">
+  <h1 globalize="open">Öppna</h1>
+  <hr class="p0 mt1 bcblack01">
+  <section class="mt2">
+    <div class="box cards gut5- br05- bcwhite- zoom-" json="true" iterate="dummy" datasource="./assets/json/dummy.json">
+      <a jsonget="url" if="{{ jsonget:url_target }};0;target:_self" target="_blank">
+        <figure jsonset="id" class="p1">
+          <i class="icon128 lightyellow ts1" jsonget="html_entity"></i>
+          <figcaption class="fwb" jsonget="title"></figcaption>
+          <small jsonget="author"></small>
+          <small class="z09">{{ jsonget: type }} {{ jsonget: version }}</small>
+        </figure>
+      </a>
+    </div>
+  </section>
+</article>

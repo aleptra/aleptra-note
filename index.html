@@ -1,10 +1,11 @@
 <!doctype html>
-<html lang="en" cache="no">
+<html lang="en" cache="no" debug="true">
   <head>
     <title>Note</title>
     <meta http-equiv="X-UA-Compatible" content="ie=edge;ie=10;chrome=1">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="version" content="0.1.0">
     <base env="local:/;prod:/">
     <style>
       @font-face {
@@ -14,13 +15,31 @@
     </style>
     <link type="text/css" href="https://www.front.nu/dist/front.css" rel="stylesheet">
     <link type="text/css" href="https://www.front.nu/dist/design/front/theme/front.css" rel="stylesheet">
-    <script src="https://www.front.nu/dist/front.js" lib="nav;json;filter" store="assets/json/vars/api:api"></script>
+    <script src="https://www.front.nu/dist/front.js" lib="nav;json;filter;globalize" store="assets/json/vars/api:api"></script>
   </head>
   <body>
-
     <header>
       <nav class="topbar bcindigo white white- h4 gap2- shade1 pr1d25" selective="true">
-        <a href="#menu" class="button bc0"><i class="icon24">≡</i></a>
+        <a href="#menu" class="button bcblack02 ts2 br0"><i class="icon24">≡</i></a>
+        <div id="menu" class="modal menu bcindigo br0">
+          <nav class="topbar flc0 shade h4 gap2-">
+            <a href="#" class="button br0 m0 p0"><i class="icon24">&#10060;</i></a>
+          </nav>
+          <section>
+            <nav class="sidebar pb2 w100 fs13 gaph2-">
+              <hr class="p0 bcwhite01">
+              <a href="new.html" globalize="new"><i class="icon pr0">&#128366;</i>Skapa ny</a>
+              <hr class="p0 bcwhite01">
+              <a href="load.html" globalize="open"><i class="icon pr0">●</i>Öppna</a>
+              <hr class="p0 bcwhite01">
+              <a href="showcase.html" globalize="showcase"><i class="icon pr0">&#128161;</i>Förhandgranska</a>
+              <hr class="p0 bcwhite01">
+            </nav>
+            <nav class="bottombar z08 fdc pb1">
+              <span globalize="current_version:">?<b metacontent="version"></b></span>
+            </nav>
+          </section>
+        </div>
         <a class="pl05" href="/" target="_top" key="0"><img class="h60 br50 bos1 bw3" src="assets/img/icon.svg"></a>
         <form class="f1">
           <input type="text" class="w100 white bs0" placeholder="Search" onkeyup="filter()">
