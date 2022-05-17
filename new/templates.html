@@ -1,4 +1,4 @@
-<script src="https://www.front.nu/dist/front.js" template="true"></script>
+<script src="https://www.front.nu/dist/front.js" template="../index"></script>
 
 <title globalize="open">Skapa från mall</title>
 
@@ -7,9 +7,9 @@
   <hr class="p0 mt1 bcblack01">
   <section class="mt2">
     <div class="box cards gut5- br05- bcwhite- zoom-" json="true" iterate="types" datasource="./assets/json/types.json">
-      <a jsonget="url" if="{{ jsonget:url_target }};0;target:_self" target="_blank">
+      <a jsonget="url" if="{{ jsonget:url_target }};0;target:_self">
         <figure jsonset="id" class="p1">
-          <i class="icon128 lightyellow ts1" jsonget="html_entity"></i>
+          <i class="icon128 {{ jsonget: html_background }}" jsonget="html_entity"></i>
           <figcaption class="fwb" jsonget="title"></figcaption>
           <small jsonget="author"></small>
           <small class="z09" jsonget="version" jsonbefore="Version: "></small>

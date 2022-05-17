@@ -4,7 +4,9 @@
         "id": 1,
         "title": "User Story",
         "html_entity": "&#128456;",
-        "url": "#",
+        "html_background": "khaki",
+        "url": "new/index.html",
+        "value": "As a [customer], I want [shopping cart feature] so that [I can easily purchase items online].",
         "type": "",
         "version": "1.0.0"
       }

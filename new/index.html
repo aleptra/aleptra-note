@@ -1,0 +1,17 @@
+<script src="https://www.front.nu/dist/front.js" template="../index"></script>
+
+<title globalize="">User Story</title>
+
+<article class="pauto">
+    <h1 globalize="">User Story</h1>
+    <hr class="p0 mt1 bcblack01">
+    <section class="mt2">
+      <div class="box cards gut5- br05- bckhaki zoom-" json="true" iterate="types" datasource="./assets/json/types.json">
+        <form id="form-note" method="patch" onchange="dataForcePush(this)" class="box cards list hm100" iterate="false"
+          json="true" datapush="10000" datasource="{{ storage:api.note.endpoint }}?id=eq.1"
+          dataheader="{{ storage:api.note.headers }}" onerror="alert('Fetch error')" onsuccess="alert('Fetch OK')">
+          <textarea name="note" class="f1 bc0_h h100" jsonget="value"></textarea>
+        </form>
+      </div>
+    </section>
+  </article>
