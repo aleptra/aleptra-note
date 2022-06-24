@@ -2,11 +2,32 @@
     "types": [
       {
         "id": 1,
+        "title": "Business feature",
+        "html_entity": "&#128456;",
+        "html_background": "khaki",
+        "url": "new/business_feature.html",
+        "value": "As a [customer], I want [shopping cart feature] so that [I can easily purchase items online].",
+        "type": "",
+        "version": "1.0.0"
+      },
+      {
+        "id": 2,
         "title": "User Story",
         "html_entity": "&#128456;",
         "html_background": "khaki",
-        "url": "new/index.html",
+        "url": "new/user_story.html",
         "value": "As a [customer], I want [shopping cart feature] so that [I can easily purchase items online].",
+        "type": "",
+        "version": "1.0.0",
+        "role": "Product Owner"
+      },
+      {
+        "id": 3,
+        "title": "Enabler Story",
+        "html_entity": "&#128456;",
+        "html_background": "goldenrod",
+        "url": "new/enabler_story.html",
+        "value": "I want [shopping cart feature] so that [I can easily purchase items online].",
         "type": "",
         "version": "1.0.0"
       }
