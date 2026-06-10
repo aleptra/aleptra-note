@@ -1,9 +1,0 @@
-{
-  "name": "English",
-  "code": "eng",
-  "direction": "ltr",
-  "translations": {
-    "current_version": "Current version",
-    "current_version:": "Current version: "
-  }
-}

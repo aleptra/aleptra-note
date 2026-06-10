@@ -1,9 +1,0 @@
-{
-  "name": "Svenska",
-  "code": "swe",
-  "direction": "ltr",
-  "translations": {
-    "current_version": "Aktuell version",
-    "current_version:": "Aktuell version: "
-  }
-}
