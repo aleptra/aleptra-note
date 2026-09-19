@@ -6,35 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="version" content="1.0.0">
   <script src="https://cdn.front.nu/nightly/front.js" module="globalize;data;navigate;keyboard" var="api"
-    conf="debug:false;debugLocalhost:true;varsDir:assets/json/vars;storageKey:note"
+    conf="debug:false;debugLocalhost:true;varsDir:assets/json/vars;storageKey:note;resetStyle:true"
     globalize-conf="folder:assets/json/locales" navigate-conf="startpage:experimental/app/note;startpageLocal:app/note">
     </script>
   <link type="text/css" href="https://cdn.front.nu/dist/front.css" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/app.css">
   <link rel="icon" href="data:,">
-  <style>
-    [hide] {
-      display: none
-    }
-
-    .h100p {
-      height: 100%
-    }
-
-    .zi50 {
-      z-index: 50
-    }
-
-    .jcc {
-      justify-content: center
-    }
-
-    .box *,
-    .cards {
-      box-sizing: border-box;
-      width: 100%
-    }
-  </style>
   <title>Note</title>
 </head>
 
@@ -49,7 +26,15 @@
     <label for="autosave">AutoSave</label>
   </header>
 
-  <aside ontoggle="toggle.class[pf t0 h100p zi50]" class="dark xl_dn">About Note</aside>
+  <aside ontoggle="toggle.class[pf t0 h100p zi50]" class="dark xl_dn" height="100%">
+    <ul flex flexdirection="column" height="100%">
+      <li>Open note</li>
+      <li>New note</li>
+    </ul>
+    <ul flex flexdirection="column">
+      <li>About Note</li>
+    </ul>
+  </aside>
   <main>
     <div id="loader" class="loader"></div>
     <textarea class="f1 p1 bc0_h h100p w100p" name="note" bindasset="apikey:api.api_key;url:api.notes.url"
