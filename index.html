@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="version" content="1.0.0">
-  <script src="https://cdn.front.nu/nightly/front.js" module="globalize;data;navigate;keyboard" var="api"
+  <script src="https://cdn.front.nu/nightly/front.js" module="globalize;data;navigate;keyboard;screen" var="api"
     conf="debug:false;debugLocalhost:true;varsDir:assets/json/vars;storageKey:note;resetStyle:true"
     globalize-conf="folder:assets/json/locales" navigate-conf="startpage:experimental/app/note;startpageLocal:app/note">
     </script>
@@ -26,13 +26,16 @@
     <label for="autosave">AutoSave</label>
   </header>
 
-  <aside ontoggle="toggle.class[pf t0 h100p zi50]" class="dark xl_dn" flex flexdirection="column" height="100%">
-    <ul flex flexdirection="column" height="100%">
-      <li>Open note</li>
-      <li>New note</li>
-    </ul>
-    <ul flex flexdirection="column">
-      <li>About Note</li>
+  <aside ontoggle="toggle.class[pf t0 zi50]" bgcolor="black09" color="white" screen-xxs="hide" screen-xl="show" flex flexdirection="column" height="100%">
+    <ul flex flexdirection="column" gap="2rem" alignitems="center" height="100%" margintop="1rem">
+      <li flexdirection="column">
+        <a alignitems="center" gap="5" flexdirection="inherit">
+          <b radius="50%" alignitems="inherit" bgcolor="black" width="42" height="42" justifycontent="center" font="30px arial">&#43;</b><b>New</b>
+        </a></li>
+      <li flexdirection="column">
+        <a alignitems="center" gap="5" flexdirection="inherit">
+          <b radius="50%" alignitems="inherit" bgcolor="black" width="42" height="42" justifycontent="center" font="28px arial">&#8862;</b><b>Open</b></li>
+        </a>
     </ul>
   </aside>
   <main>
