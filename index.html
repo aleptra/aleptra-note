@@ -6,46 +6,58 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="version" content="1.0.0">
   <script src="https://cdn.front.nu/nightly/front.js" module="globalize;data;navigate;keyboard;screen" var="api"
-    conf="debug:false;debugLocalhost:true;varsDir:assets/json/vars;storageKey:note;resetStyle:true"
+    conf="debug:false;debugLocalhost:true;resetStyle:true;varsDir:assets/json/vars;storageKey:note;resetStyle:true"
     globalize-conf="folder:assets/json/locales" navigate-conf="startpage:experimental/app/note;startpageLocal:app/note">
     </script>
   <link type="text/css" href="https://cdn.front.nu/dist/front.css" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/app.css">
   <link rel="icon" href="data:,">
   <title>Note</title>
 </head>
 
-<body class="light">
-  <div id="navloader" class="navloader pa t0 w100 bcblack03 h2px" hide>
+<body screen-layout="ultimate">
+
+  <div id="navloader" absolute top="0" width="100%" class="navloader bcblack03 h2px" hide>
     <div class="bcblack08"></div>
   </div>
-  <header class="topbar h4 pr1 bcindigo white- white shade1">
-    <button click="toggle" clicktargetfield="aside[0]" class="ml1 dark p05 br50 hover-"><i class="icon24">≡</i></button>
-    <a class="ml1 mr1" href="./" globalize-get="note" uppercase bold>Note</a>
-    <input class="fr mr05" type="checkbox" id="autosave" onvaluechange="alert:hej">
-    <label for="autosave">AutoSave</label>
+
+  <header bgcolor="indigo" color="white" height="4rem" padding="0 1rem" color="white" class="topbar shade1"
+    gap="0.5rem">
+    <button click="toggle" clicktargetfield="aside[0]" radius="50%" class="dark hover-" radius="50%" width="40"
+      height="40" fontsize="24px">≡</button>
+    <a target="_top" href="./" bindglobal="title:title" globalize-get uppercase bold>{title}</a>
+    <div class="fr" flex gap="7">
+      <input type="checkbox" id="autosave" onvaluechange="alert:hej">
+      <label for="autosave">AutoSave</label>
+    </div>
   </header>
 
-  <aside ontoggle="toggle.class[pf t0 zi50]" bgcolor="black09" color="white" screen-xxs="hide" screen-xl="show" flex flexdirection="column" height="100%">
+  <aside ontoggle="toggle.class[pf t0 zi50]" bgcolor="black09" color="white" screen-xxs="hide" screen-xl="show" flex
+    flexdirection="column" height="100%">
     <ul flex flexdirection="column" gap="2rem" alignitems="center" height="100%" margintop="1rem">
       <li flexdirection="column">
         <a alignitems="center" gap="5" flexdirection="inherit">
-          <b radius="50%" alignitems="inherit" bgcolor="black" width="42" height="42" justifycontent="center" font="30px arial">&#43;</b><b>New</b>
-        </a></li>
-      <li flexdirection="column">
-        <a alignitems="center" gap="5" flexdirection="inherit">
-          <b radius="50%" alignitems="inherit" bgcolor="black" width="42" height="42" justifycontent="center" font="28px arial">&#8862;</b><b>Open</b></li>
+          <b radius="50%" alignitems="inherit" bgcolor="black" width="42" height="42" justifycontent="center"
+            font="30px arial">&#43;</b><b>New</b>
         </a>
+      </li>
+      <li flexdirection="column">
+        <a target="main" href="https://save.aleptra.com" alignitems="center" gap="5" flexdirection="inherit">
+          <b radius="50%" alignitems="inherit" bgcolor="black" width="42" height="42" justifycontent="center"
+            font="28px arial">&#8862;</b><b>Open</b>
+      </li>
+      </a>
     </ul>
   </aside>
-  <main>
+
+  <main justifycontent="center" alignitems="center">
     <div id="loader" class="loader"></div>
-    <textarea class="f1 p1 bc0_h h100p w100p" name="note" bindasset="apikey:api.api_key;url:api.notes.url"
-      bindvar="id:1" onvaluechange="data-reqpatch" data-src="{url}?id=eq.{id}" data-header="apikey:{apikey}"
-      data-loader="#loader" data-reqpatch="{url}?id=eq.{id}&limit=1&order=id" data-enctype="application/json"
-      data-get="0.note">
+    <textarea name="note" flex="1" padding="1rem" bindasset="apikey:api.api_key;url:api.notes.url" bindvar="id:1"
+      onvaluechange="data-reqpatch" data-src="{url}?id=eq.{id}" data-header="apikey:{apikey}" data-loader="#loader"
+      data-reqpatch="{url}?id=eq.{id}&limit=1&order=id" data-enctype="application/json" data-get="0.note" width="100%"
+      height="100%" border="0">
     </textarea>
   </main>
+
   <aside></aside>
   <footer></footer>
 </body>
