@@ -41,7 +41,7 @@
         </a>
       </li>
       <li flexdirection="column">
-        <a target="main" href="https://save.aleptra.com" alignitems="center" gap="5" flexdirection="inherit">
+        <a target="main" bindglobal="local:isLocalNetwork" onbindglobal="if:([{local}]:[true])/sethref:[../save/browse.html]" href="https://save.aleptra.com/browse" navigate-pushstate="false" alignitems="center" gap="5" flexdirection="inherit">
           <b radius="50%" alignitems="inherit" bgcolor="black" width="42" height="42" justifycontent="center"
             font="28px arial">&#8862;</b><b>Open</b>
       </li>

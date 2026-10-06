@@ -1,4 +1,11 @@
 {
+  "origin": "assets/json/mock",
+  "schema": {
+    "endpoint": "{origin}/{db}/dummy.json?schema="
+  },
+  "table": {
+    "endpoint": "{origin}/{db}/dummy.json?table="
+  },
   "api_key": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYW5vbiIsImlhdCI6MTYxODA3Mzg3MSwiZXhwIjoxOTMzNjQ5ODcxfQ.NFnRf6sJq1nhbGUD8eTvliQiOLbYNHQ2GFgYcaQ3Mmw",
   "notes": {
     "url": "https://lmaxhwqfjsphltrhlewl.supabase.co/rest/v1/notes"
